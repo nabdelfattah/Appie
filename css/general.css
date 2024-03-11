@@ -1,0 +1,160 @@
+* {
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+html {
+  font-size: 62.5%;
+  overflow-x: hidden;
+}
+
+body {
+  font-family: "Roboto", sans-serif;
+  line-height: 1;
+  font-weight: 400;
+  color: #0e1133;
+  overflow-x: hidden;
+}
+button {
+  background-color: inherit;
+  border: none;
+  cursor: pointer;
+}
+
+/* CONTAINER */
+.container {
+  width: 100%;
+  max-width: 130rem;
+}
+.fluid-section {
+  display: flex;
+  justify-content: center;
+  padding-right: 2.4rem;
+  padding-left: 2.4rem;
+}
+
+/* GRID */
+.grid {
+  display: grid;
+}
+.grid--2-cols {
+  grid-template-columns: repeat(2, 1fr);
+}
+.grid--3-cols {
+  grid-template-columns: repeat(3, 1fr);
+}
+.grid--4-cols {
+  grid-template-columns: repeat(4, 1fr);
+}
+
+/* HEADINGS */
+.heading-primary {
+  font-size: 6.4rem;
+  font-weight: 400;
+  line-height: 1.1;
+  margin-bottom: 3rem;
+}
+.heading-secondary {
+  font-size: 5.2rem;
+  letter-spacing: -0.8px;
+  line-height: 1.2;
+  font-weight: 700;
+  margin-bottom: 1.2rem;
+}
+.heading-tertiary {
+  font-size: 2rem;
+  font-weight: 700;
+  text-shadow: 0 0 1px currentColor;
+  margin-bottom: 1.4rem;
+}
+.subheading {
+  font-size: 1.4rem;
+  letter-spacing: 1px;
+  color: #ff3e66;
+  text-shadow: 0 0 1px currentColor;
+  margin-bottom: 1.8rem;
+}
+.header-secondary {
+  margin-bottom: 6.4rem;
+}
+.section-description {
+  font-size: 2rem;
+  letter-spacing: 0.5px;
+  line-height: 1.6;
+  color: #727278;
+  text-shadow: 0 0 1px currentColor;
+}
+.feature-description {
+  font-size: 1.7rem;
+  line-height: 1.6;
+  color: #7f7f85;
+  text-shadow: 0 0 1px currentColor;
+  margin-bottom: 3.2rem;
+}
+
+/* BUTTONS */
+.btn,
+.btn:link,
+.btn:visited {
+  display: inline-block;
+  cursor: pointer;
+  text-decoration: none;
+  font-size: 1.6rem;
+  text-shadow: 0 0 1px currentColor;
+  padding: 1.8rem 3.2rem;
+  border-radius: 100px;
+  transition: all 0.3s;
+}
+.btn--primary:link,
+.btn--primary:visited {
+  color: #fff;
+  background-color: #ff3e66;
+}
+.btn--primary:hover,
+.btn--primary:active {
+  background-color: #cc3252;
+}
+.btn--secondary:link,
+.btn--secondary:visited {
+  border: 1px solid #d6d9dd;
+  background-color: #fff;
+}
+.btn--secondary:hover,
+.btn--secondary:active {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.13);
+}
+
+/* ICON */
+.icon {
+  font-size: 2rem;
+}
+
+/* Arrow Box */
+.arrows-box {
+  display: flex;
+  gap: 1rem;
+  align-items: start;
+}
+.btn-arrows {
+  display: inline-block;
+  padding: 1.3rem;
+  border: 1px solid #d6d9dd;
+  border-radius: 50%;
+  cursor: pointer;
+  transition: all 0.3s;
+}
+.btn-arrows:hover {
+  box-shadow: 0 0.5rem 1rem rgba(0, 0, 0, 0.13);
+}
+.icon-arrows {
+  font-size: 2.2rem;
+}
+
+/* HELPER CLASSES */
+.centered {
+  text-align: center;
+}
+.white {
+  color: #fff !important;
+}
