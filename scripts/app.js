@@ -1,6 +1,8 @@
+import { clickPricingBtnHandler } from "./handlers.js";
+
 const headerEl = document.querySelector(".header");
-const openNavBtn = document.querySelector("[name='menu-outline']");
-const closeNavBtn = document.querySelector("[name='close-outline']");
+const openNavBtn = document.querySelector(".menu-open");
+const closeNavBtn = document.querySelector(".menu-close");
 const sectionHeroEl = document.querySelector(".section-hero");
 
 // STICKY NAVIGATION
@@ -20,7 +22,9 @@ function isInHeroSection() {
   return isInViewport;
 }
 openNavBtn.addEventListener("click", function () {
+  console.log({openNavBtn})
   headerEl.classList.add("open-nav");
+  console.log({closeNavBtn})
   document.body.classList.add("sticky");
 });
 closeNavBtn.addEventListener("click", function () {
@@ -49,24 +53,47 @@ allLinks.forEach(function (link) {
 });
 
 
-// FIXING FLEXBOX GAP PROPERTY IN SOME SAFARI VERSIONS
-function checkFlexGap() {
-  var flex = document.createElement("div");
-  flex.style.display = "flex";
-  flex.style.flexDirection = "column";
-  flex.style.rowGap = "1px";
-  flex.appendChild(document.createElement("div"));
-  flex.appendChild(document.createElement("div"));
-  document.body.appendChild(flex);
-  var isSupported = flex.scrollHeight === 1;
-  flex.parentNode.removeChild(flex);
-  if (!isSupported) document.body.classList.add("no-flex-gap");
-}
-checkFlexGap();
-
 // SET CURRENT YRAR
 const yearEl = document.querySelector(".year");
 const currentYear = new Date().getFullYear();
 yearEl.textContent = currentYear;
 
+// PREVENT PAGE REFRESH AFTER SUBMITTING FORMS
 document.querySelector('.hero-form').addEventListener('submit', e => e.preventDefault())
+
+
+// PRICING SECTION'S BUTTONS
+document.querySelectorAll('.pricing-tag').forEach(btn => {
+  btn.addEventListener('click', clickPricingBtnHandler)
+})
+
+// ANIMATIONS
+
+// Animate numeric value DOM element from a start value to an end value over a specified duration.
+function animateValue(obj, start, end, duration) {
+  let startTimestamp = null;
+  window.requestAnimationFrame(step);
+  function step(timestamp) {
+    if (!startTimestamp) startTimestamp = timestamp;
+    const progress = Math.min((timestamp - startTimestamp) / duration, 1);
+    obj.innerHTML = Math.floor(progress * (end - start) + start);
+    if (progress < 1) {
+      window.requestAnimationFrame(step);
+    }
+  };
+}
+// Apply animation when element observed on screen
+const counterObserver = new IntersectionObserver((entries) => {
+  entries.forEach(entry => {
+    if (entry.isIntersecting) {
+      animateValue(entry.target, 1, +entry.target.textContent, 5000);
+      observer.unobserve(entry.target)
+    }
+  });
+}, { threshold: 0.1 });
+// apply on hero section's feedback counter
+counterObserver.observe(document.querySelector('.hero-counter'))
+// apply on section statistics
+document.querySelectorAll('.data-point strong').forEach(el => counterObserver.observe(el))
+
+

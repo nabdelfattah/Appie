@@ -16,7 +16,7 @@
     <link rel="preconnect" href="https://fonts.googleapis.com" />
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
     <link
-      href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;500;700:900&display=swap"
+      href="https://fonts.googleapis.com/css2?family=Roboto:ital,wght@0,100;0,300;0,400;0,500;0,700;0,900;1,100;1,300;1,400;1,500;1,700;1,900&display=swap"
       rel="stylesheet"
     />
     <link rel="stylesheet" href="css/general.css" />
@@ -26,7 +26,7 @@
       defer
       src="https://unpkg.com/smoothscroll-polyfill@0.4.4/dist/smoothscroll.min.js"
     ></script>
-    <script defer src="scripts/script.js"></script>
+    <script defer type="module" src="scripts/app.js"></script>
     <title>Appie</title>
   </head>
   <body>
@@ -39,7 +39,23 @@
           <li>
             <a class="main-nav-link" href="#">
               Home
-              <ion-icon class="icon" name="chevron-down-outline"></ion-icon>
+              <svg
+                class="icon"
+                fill="#0e1133"
+                height="12.6px"
+                id="Layer_1"
+                style="enable-background: new 0 0 12.6 12.6"
+                version="1.1"
+                viewBox="0 0 512 512"
+                width="12.6px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <polygon
+                  points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "
+                />
+              </svg>
             </a>
           </li>
           <li>
@@ -48,19 +64,67 @@
           <li>
             <a class="main-nav-link" href="#pages">
               Pages
-              <ion-icon class="icon" name="chevron-down-outline"></ion-icon>
+              <svg
+                class="icon"
+                color="#0e1133"
+                height="12.6px"
+                id="Layer_1"
+                style="enable-background: new 0 0 12.6 12.6"
+                version="1.1"
+                viewBox="0 0 512 512"
+                width="12.6px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <polygon
+                  points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "
+                />
+              </svg>
             </a>
           </li>
           <li>
             <a class="main-nav-link" href="#news">
               News
-              <ion-icon class="icon" name="chevron-down-outline"></ion-icon>
+              <svg
+                class="icon"
+                color="#0e1133"
+                height="12.6px"
+                id="Layer_1"
+                style="enable-background: new 0 0 12.6 12.6"
+                version="1.1"
+                viewBox="0 0 512 512"
+                width="12.6px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <polygon
+                  points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "
+                />
+              </svg>
             </a>
           </li>
           <li>
             <a class="main-nav-link" href="#contact">
               Contact
-              <ion-icon class="icon" name="chevron-down-outline"></ion-icon>
+              <svg
+                class="icon"
+                color="#0e1133"
+                height="12.6px"
+                id="Layer_1"
+                style="enable-background: new 0 0 12.6 12.6"
+                version="1.1"
+                viewBox="0 0 512 512"
+                width="12.6px"
+                xml:space="preserve"
+                xmlns="http://www.w3.org/2000/svg"
+                xmlns:xlink="http://www.w3.org/1999/xlink"
+              >
+                <polygon
+                  points="396.6,160 416,180.7 256,352 96,180.7 115.3,160 256,310.5 "
+                />
+              </svg>
             </a>
           </li>
           <li>
@@ -71,8 +135,16 @@
         </ul>
       </nav>
       <button class="mob-nav-btn">
-        <ion-icon class="icon" name="menu-outline"></ion-icon>
-        <ion-icon class="icon" name="close-outline"></ion-icon>
+        <img
+          class="icon menu-open"
+          src="images/icons/menu.svg"
+          alt="menu icon"
+        />
+        <img
+          class="icon menu-close"
+          src="images/icons/close.svg"
+          alt="close icon"
+        />
       </button>
     </header>
 
@@ -86,7 +158,7 @@
             <p class="hero-text">Find the best application in the appie</p>
             <form class="hero-form" action="#">
               <label for="email">
-                <ion-icon class="icon" name="mail-outline"></ion-icon>
+                <img src="images/icons/mail-lighter.svg" alt="envelope" />
               </label>
               <input
                 id="email"
@@ -94,8 +166,12 @@
                 type="email"
                 placeholder="info@appie.com"
               />
-              <button type="submit">
-                <ion-icon class="icon" name="arrow-forward-outline"></ion-icon>
+              <button type="submit" aria-label="submit">
+                <img
+                  src="images/icons/arrow-right-pink.svg"
+                  alt="right arrow"
+                  class="right-arrow"
+                />
               </button>
             </form>
             <div class="feedback">
@@ -121,7 +197,10 @@
                   alt="a photo of a custome"
                 />
               </div>
-              <span class="feedback-text"><strong>30k</strong>Feedback</span>
+              <span class="feedback-text"
+                ><strong><span class="hero-counter">30</span>k</strong
+                >Feedback</span
+              >
             </div>
           </div>
           <picture class="hero-img-box">
@@ -146,13 +225,21 @@
               </p>
             </div>
             <a class="btn btn--secondary features-btn" href="#">
-              <span>View all features</span>
-              <ion-icon class="icon" name="arrow-forward-outline"></ion-icon>
+              <span>View all features&nbsp;</span>
+              <img
+                src="images/icons/arrow-right-black.svg"
+                alt="right arrow"
+                class="icon right-arrow"
+              />
             </a>
           </header>
           <div class="features grid grid--3-cols">
-            <div class="feature">
-              <ion-icon class="icon" name="flash"></ion-icon>
+            <div class="feature" data-color="light-blue">
+              <img
+                src="images/icons/features/flash.svg"
+                alt="flash icon"
+                class="icon"
+              />
               <p class="heading-tertiary">Fast and intuitive</p>
               <p class="feature-description">
                 Oxford posh bevvy give us a bell gutted mate spend a penny
@@ -160,16 +247,21 @@
               </p>
               <div class="feature-link-box">
                 <a class="feature-link" href="#">
-                  <span>Read mor </span>
-                  <ion-icon
-                    class="icon"
-                    name="arrow-forward-outline"
-                  ></ion-icon>
+                  <span>Read more &nbsp; </span>
+                  <img
+                    src="images/icons/arrow-right-gray.svg"
+                    alt="right arrow"
+                    class="right-arrow"
+                  />
                 </a>
               </div>
             </div>
-            <div class="feature">
-              <ion-icon class="icon" name="home"></ion-icon>
+            <div class="feature" data-color="pink">
+              <img
+                src="images/icons/features/home.svg"
+                alt="home icon"
+                class="icon"
+              />
               <p class="heading-tertiary">Fast and intuitive</p>
               <p class="feature-description">
                 Oxford posh bevvy give us a bell gutted mate spend a penny
@@ -177,16 +269,21 @@
               </p>
               <div class="feature-link-box">
                 <a class="feature-link" href="#">
-                  <span>Read mor </span>
-                  <ion-icon
-                    class="icon"
-                    name="arrow-forward-outline"
-                  ></ion-icon>
+                  <span>Read more &nbsp; </span>
+                  <img
+                    src="images/icons/arrow-right-gray.svg"
+                    alt="right arrow"
+                    class="right-arrow"
+                  />
                 </a>
               </div>
             </div>
-            <div class="feature">
-              <ion-icon class="icon" name="link"></ion-icon>
+            <div class="feature" data-color="blue">
+              <img
+                src="images/icons/features/link.svg"
+                alt="link icon"
+                class="icon"
+              />
               <p class="heading-tertiary">Fast and intuitive</p>
               <p class="feature-description">
                 Oxford posh bevvy give us a bell gutted mate spend a penny
@@ -194,16 +291,21 @@
               </p>
               <div class="feature-link-box">
                 <a class="feature-link" href="#">
-                  <span>Read mor </span>
-                  <ion-icon
-                    class="icon"
-                    name="arrow-forward-outline"
-                  ></ion-icon>
+                  <span>Read more &nbsp; </span>
+                  <img
+                    src="images/icons/arrow-right-gray.svg"
+                    alt="right arrow"
+                    class="right-arrow"
+                  />
                 </a>
               </div>
             </div>
-            <div class="feature">
-              <ion-icon class="icon" name="notifications"></ion-icon>
+            <div class="feature" data-color="orange">
+              <img
+                src="images/icons/features/bell.svg"
+                alt="bell icon"
+                class="icon"
+              />
               <p class="heading-tertiary">Fast and intuitive</p>
               <p class="feature-description">
                 Oxford posh bevvy give us a bell gutted mate spend a penny
@@ -211,16 +313,21 @@
               </p>
               <div class="feature-link-box">
                 <a class="feature-link" href="#">
-                  <span>Read mor </span>
-                  <ion-icon
-                    class="icon"
-                    name="arrow-forward-outline"
-                  ></ion-icon>
+                  <span>Read more &nbsp; </span>
+                  <img
+                    src="images/icons/arrow-right-gray.svg"
+                    alt="right arrow"
+                    class="right-arrow"
+                  />
                 </a>
               </div>
             </div>
-            <div class="feature">
-              <ion-icon class="icon" name="settings"></ion-icon>
+            <div class="feature" data-color="purple">
+              <img
+                src="images/icons/features/settings.svg"
+                alt="settings icon"
+                class="icon"
+              />
               <p class="heading-tertiary">Fast and intuitive</p>
               <p class="feature-description">
                 Oxford posh bevvy give us a bell gutted mate spend a penny
@@ -228,16 +335,21 @@
               </p>
               <div class="feature-link-box">
                 <a class="feature-link" href="#">
-                  <span>Read mor </span>
-                  <ion-icon
-                    class="icon"
-                    name="arrow-forward-outline"
-                  ></ion-icon>
+                  <span>Read more &nbsp; </span>
+                  <img
+                    src="images/icons/arrow-right-gray.svg"
+                    alt="right arrow"
+                    class="right-arrow"
+                  />
                 </a>
               </div>
             </div>
-            <div class="feature">
-              <ion-icon class="icon" name="lock-closed"></ion-icon>
+            <div class="feature" data-color="green">
+              <img
+                src="images/icons/features/lock.svg"
+                alt="lock icon"
+                class="icon"
+              />
               <p class="heading-tertiary">Fast and intuitive</p>
               <p class="feature-description">
                 Oxford posh bevvy give us a bell gutted mate spend a penny
@@ -245,11 +357,12 @@
               </p>
               <div class="feature-link-box">
                 <a class="feature-link" href="#">
-                  <span>Read mor </span>
-                  <ion-icon
-                    class="icon"
-                    name="arrow-forward-outline"
-                  ></ion-icon>
+                  <span>Read more &nbsp; </span>
+                  <img
+                    src="images/icons/arrow-right-gray.svg"
+                    alt="right arrow"
+                    class="right-arrow"
+                  />
                 </a>
               </div>
             </div>
@@ -275,7 +388,11 @@
             </p>
             <ul class="marketing-list">
               <li class="marketing-item">
-                <ion-icon class="icon" name="checkmark"></ion-icon>
+                <img
+                  src="images/icons/check.svg"
+                  alt="check mark"
+                  class="icon"
+                />
                 <div>
                   <p class="heading-tertiary">Carefully designed</p>
                   <p class="feature-description">
@@ -284,7 +401,11 @@
                 </div>
               </li>
               <li class="marketing-item">
-                <ion-icon class="icon" name="checkmark"></ion-icon>
+                <img
+                  src="images/icons/check.svg"
+                  alt="check mark"
+                  class="icon"
+                />
                 <div>
                   <p class="heading-tertiary">Choose a App</p>
                   <p class="feature-description">
@@ -309,8 +430,7 @@
           </header>
           <div class="events grid grid--2-cols">
             <ul class="events-list">
-              <li class="events-item">
-                <ion-icon class="icon" name="ellipse"></ion-icon>
+              <li class="event-item">
                 <div>
                   <p class="heading-tertiary white">Well integrated</p>
                   <p class="feature-description">
@@ -318,8 +438,7 @@
                   </p>
                 </div>
               </li>
-              <li class="events-item">
-                <ion-icon class="icon" name="ellipse"></ion-icon>
+              <li class="event-item">
                 <div>
                   <p class="heading-tertiary white">Clean and modern Design</p>
                   <p class="feature-description">
@@ -327,8 +446,7 @@
                   </p>
                 </div>
               </li>
-              <li class="events-item">
-                <ion-icon class="icon" name="ellipse"></ion-icon>
+              <li class="event-item">
                 <div>
                   <p class="heading-tertiary white">Light and dark mode</p>
                   <p class="feature-description">
@@ -400,11 +518,13 @@
 
       <section class="section-learn fluid-section" id="learn-more">
         <div class="learn-how container">
-          <picture class="learn-img-box">
-            <source srcset="images/video-thumb-1.webp" type="image/webp" />
-            <source srcset="images/video-thumb-1.jpg" type="image/jpg" />
-            <img src="images/video-thumb-1.jpg" alt="mobile devices" />
-          </picture>
+          <video
+            class="learn-img-box"
+            controls
+            poster="images/video-thumb-1.jpg"
+          >
+            <source src="video.mp4" type="video/mp4" />
+          </video>
           <picture class="learn-img-box">
             <source srcset="images/video-slide-1.webp" type="image/webp" />
             <source srcset="images/video-slide-1.jpg" type="image/jpg" />
@@ -424,16 +544,16 @@
           </div>
           <div class="arrows-box">
             <button class="btn-learn btn-arrows">
-              <ion-icon
+              <img
                 class="icon-learn icon-arrows"
-                name="arrow-back"
-              ></ion-icon>
+                src="images/icons/arrow-left-solid.svg"
+              />
             </button>
             <button class="btn-learn btn-arrows">
-              <ion-icon
+              <img
                 class="icon-learn icon-arrows"
-                name="arrow-forward"
-              ></ion-icon>
+                src="images/icons/arrow-right-gray.svg"
+              />
             </button>
           </div>
         </div>
@@ -452,14 +572,19 @@
           </p>
           <div class="app-stores-box">
             <a class="ios-link" href="#">
-              <ion-icon class="icon-logo" name="logo-apple"></ion-icon>
+              <img
+                class="icon-logo"
+                src="images/icons/apple_icon.svg"
+                alt="apple store icon"
+              />
               <span>Download for<br /><strong>ios</strong></span>
             </a>
             <a class="android-link" href="#">
-              <ion-icon
+              <img
                 class="icon-logo"
-                name="logo-google-playstore"
-              ></ion-icon>
+                src="images/icons/play_store_icon.svg"
+                alt="google play store icon"
+              />
               <span>Download for<br /><strong>Android</strong></span>
             </a>
           </div>
@@ -474,7 +599,7 @@
               The full money spiffing good time no biggie cack drub fantastic
             </p>
             <div class="pricing-tags">
-              <button class="current-tag">Monthly</button>
+              <button class="pricing-tag pricing-tag--selected">Monthly</button>
               <button class="pricing-tag">Yearly</button>
             </div>
           </header>
@@ -489,15 +614,27 @@
               <p class="plan-text">Get your 14 day free trial</p>
               <ul class="plan-features">
                 <li>
-                  <ion-icon class="plan-icon" name="checkmark-sharp"></ion-icon>
+                  <img
+                    class="plan-icon"
+                    src="images/icons/check blue.svg"
+                    alt="check mark"
+                  />
                   <span class="plan-feature">60-day chat history</span>
                 </li>
                 <li>
-                  <ion-icon class="plan-icon" name="checkmark-sharp"></ion-icon>
+                  <img
+                    class="plan-icon"
+                    src="images/icons/check blue.svg"
+                    alt="check mark"
+                  />
                   <span class="plan-feature">15 GB cloud storage</span>
                 </li>
                 <li>
-                  <ion-icon class="plan-icon" name="checkmark-sharp"></ion-icon>
+                  <img
+                    class="plan-icon"
+                    src="images/icons/check blue.svg"
+                    alt="check mark"
+                  />
                   <span class="plan-feature">24/7 support</span>
                 </li>
               </ul>
@@ -513,15 +650,27 @@
               <p class="plan-text">Billed $276 per website annually</p>
               <ul class="plan-features">
                 <li>
-                  <ion-icon class="plan-icon" name="checkmark-sharp"></ion-icon>
+                  <img
+                    class="plan-icon"
+                    src="images/icons/check blue.svg"
+                    alt="check mark"
+                  />
                   <span class="plan-feature">60-day chat history</span>
                 </li>
                 <li>
-                  <ion-icon class="plan-icon" name="checkmark-sharp"></ion-icon>
+                  <img
+                    class="plan-icon"
+                    src="images/icons/check blue.svg"
+                    alt="check mark"
+                  />
                   <span class="plan-feature">50 GB cloud storage</span>
                 </li>
                 <li>
-                  <ion-icon class="plan-icon" name="checkmark-sharp"></ion-icon>
+                  <img
+                    class="plan-icon"
+                    src="images/icons/check blue.svg"
+                    alt="check mark"
+                  />
                   <span class="plan-feature">24/7 support</span>
                 </li>
               </ul>
@@ -537,19 +686,35 @@
               <p class="plan-text">Billed $276 per website annually</p>
               <ul class="plan-features">
                 <li>
-                  <ion-icon class="plan-icon" name="checkmark-sharp"></ion-icon>
+                  <img
+                    class="plan-icon"
+                    src="images/icons/check green.svg"
+                    alt="check mark"
+                  />
                   <span class="plan-feature">60-day chat history</span>
                 </li>
                 <li>
-                  <ion-icon class="plan-icon" name="checkmark-sharp"></ion-icon>
+                  <img
+                    class="plan-icon"
+                    src="images/icons/check green.svg"
+                    alt="check mark"
+                  />
                   <span class="plan-feature">Data security</span>
                 </li>
                 <li>
-                  <ion-icon class="plan-icon" name="checkmark-sharp"></ion-icon>
+                  <img
+                    class="plan-icon"
+                    src="images/icons/check green.svg"
+                    alt="check mark"
+                  />
                   <span class="plan-feature">100 GB cloud storage</span>
                 </li>
                 <li>
-                  <ion-icon class="plan-icon" name="checkmark-sharp"></ion-icon>
+                  <img
+                    class="plan-icon"
+                    src="images/icons/check green.svg"
+                    alt="check mark"
+                  />
                   <span class="plan-feature">24/7 support</span>
                 </li>
               </ul>
@@ -562,14 +727,34 @@
       <section class="section-testimonial fluid-section">
         <div class="container testimonial">
           <figure class="testimonial-img-box">
-            <img src="images/people/customer-4.jpg" />
+            <img class="img" src="images/people/customer-4.jpg" />
             <caption>
               <div class="stars">
-                <ion-icon class="icon" name="star"></ion-icon>
-                <ion-icon class="icon" name="star"></ion-icon>
-                <ion-icon class="icon" name="star"></ion-icon>
-                <ion-icon class="icon" name="star"></ion-icon>
-                <ion-icon class="icon" name="star"></ion-icon>
+                <img
+                  src="images/icons/star.svg"
+                  alt="a golden star"
+                  class="icon"
+                />
+                <img
+                  src="images/icons/star.svg"
+                  alt="a golden star"
+                  class="icon"
+                />
+                <img
+                  src="images/icons/star.svg"
+                  alt="a golden star"
+                  class="icon"
+                />
+                <img
+                  src="images/icons/star.svg"
+                  alt="a golden star"
+                  class="icon"
+                />
+                <img
+                  src="images/icons/star.svg"
+                  alt="a golden star"
+                  class="icon"
+                />
               </div>
               <span class="reviews">(4.7) reviews</span>
             </caption>
@@ -587,17 +772,41 @@
                 <p class="testimonial-job">Web developer</p>
               </div>
               <div class="arrows-box">
-                <button class="btn-arrows btn-testimonial">
-                  <ion-icon
-                    class="icon-arrows icon-testimonial"
-                    name="arrow-back"
-                  ></ion-icon>
+                <button
+                  class="btn-arrows btn-testimonial"
+                  aria-label="previous testimonial"
+                >
+                  <svg
+                    class="icon-arrows icon-testimonial md hydrated"
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    fill="currentColor"
+                    width="16"
+                    height="16"
+                  >
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M9.4 233.4c-12.5 12.5-12.5 32.8 0 45.3l160 160c12.5 12.5 32.8 12.5 45.3 0s12.5-32.8 0-45.3L109.2 288 416 288c17.7 0 32-14.3 32-32s-14.3-32-32-32l-306.7 0L214.6 118.6c12.5-12.5 12.5-32.8 0-45.3s-32.8-12.5-45.3 0l-160 160z"
+                    />
+                  </svg>
                 </button>
-                <button class="btn-arrows btn-testimonial">
-                  <ion-icon
+                <button
+                  class="btn-arrows btn-testimonial"
+                  aria-label="next testimonial"
+                >
+                  <svg
                     class="icon-arrows icon-testimonial"
-                    name="arrow-forward"
-                  ></ion-icon>
+                    xmlns="http://www.w3.org/2000/svg"
+                    viewBox="0 0 448 512"
+                    fill="currentColor"
+                    width="16"
+                    height="16"
+                  >
+                    <!--!Font Awesome Free 6.6.0 by @fontawesome - https://fontawesome.com License - https://fontawesome.com/license/free Copyright 2024 Fonticons, Inc.-->
+                    <path
+                      d="M438.6 278.6c12.5-12.5 12.5-32.8 0-45.3l-160-160c-12.5-12.5-32.8-12.5-45.3 0s-12.5 32.8 0 45.3L338.8 224 32 224c-17.7 0-32 14.3-32 32s14.3 32 32 32l306.7 0L233.4 393.4c-12.5 12.5-12.5 32.8 0 45.3s32.8 12.5 45.3 0l160-160z"
+                    />
+                  </svg>
                 </button>
               </div>
             </div>
@@ -651,7 +860,7 @@
       </section>
     </main>
 
-    <footer id="contact">
+    <footer id="contact" class="footer">
       <nav class="footer-nav">
         <div class="logo-col">
           <img class="footer-logo" src="images/logo.png" alt="appie's logo" />
@@ -661,21 +870,41 @@
           <div class="footer-read-more">
             <a class="feature-link" href="#">
               <span>read more&nbsp;</span>
-              <ion-icon class="icon" name="arrow-forward-outline"></ion-icon>
+              <img
+                class="right-arrow"
+                src="images/icons/arrow-right-black.svg"
+                alt="right arrow"
+              />
             </a>
           </div>
           <div class="social-media">
             <a class="social-link" href="#">
-              <ion-icon class="icon" name="logo-facebook"></ion-icon>
+              <img
+                src="images/icons/facebook.svg"
+                alt="facebook logo"
+                class="icon"
+              />
             </a>
             <a class="social-link" href="#">
-              <ion-icon class="icon" name="logo-twitter"></ion-icon>
+              <img
+                src="images/icons/twitter.svg"
+                alt="twitter logo"
+                class="icon"
+              />
             </a>
             <a class="social-link" href="#">
-              <ion-icon class="icon" name="logo-pinterest"></ion-icon>
+              <img
+                src="images/icons/pinterest.svg"
+                alt="pinterest logo"
+                class="icon"
+              />
             </a>
             <a class="social-link" href="#">
-              <ion-icon class="icon" name="logo-linkedin"></ion-icon>
+              <img
+                src="images/icons/linkedin.svg"
+                alt="linkedin logo"
+                class="icon"
+              />
             </a>
           </div>
         </div>
@@ -703,18 +932,17 @@
           <p class="heading-tertiary">Get In Touch</p>
           <ul class="footer-links">
             <li class="contact-item">
-              <ion-icon class="icon" name="mail-outline"></ion-icon>
+              <img src="images/icons/email.svg" alt="email" class="icon" />
               <a class="contact-link" href="mailto:support@appie.com">
                 support@appie.com
               </a>
             </li>
             <li class="contact-item">
-              <ion-icon class="icon" name="call-outline"></ion-icon>
-              <!-- you can write this href="+6-423-427-6244" or the following -->
+              <img src="images/icons/phone.svg" alt="a phone" class="icon" />
               <a class="contact-link" href="+64234276244"> +(642)342-762-44 </a>
             </li>
             <li class="contact-item">
-              <ion-icon class="icon" name="location-outline"></ion-icon>
+              <img src="images/icons/pin.svg" alt="a pin" class="icon" />
               <address class="contact-link">
                 442 Belle Terre St Floor 7, San Francisco, AV 4206
               </address>
@@ -726,11 +954,19 @@
       <div class="footer-app">
         <div class="footer-downloads">
           <a class="footer-download ios" href="#">
-            <ion-icon class="icon" name="logo-apple"></ion-icon>
+            <img
+              src="images/icons/apple_icon - Copy.svg"
+              alt="apple icon"
+              class="icon"
+            />
             <span>&nbsp;Download for IOS</span>
           </a>
           <a class="footer-download android" href="#">
-            <ion-icon class="icon" name="logo-google-playstore"></ion-icon>
+            <img
+              src="images/icons/play_store_icon.svg"
+              alt="google play store icon"
+              class="icon"
+            />
             <span>&nbsp;Download for Android</span>
           </a>
         </div>
@@ -739,14 +975,5 @@
         </p>
       </div>
     </footer>
-
-    <script
-      type="module"
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.esm.js"
-    ></script>
-    <script
-      nomodule
-      src="https://unpkg.com/ionicons@7.1.0/dist/ionicons/ionicons.js"
-    ></script>
   </body>
 </html>

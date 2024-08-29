@@ -121,17 +121,22 @@
   .main-nav-list {
     flex-direction: column;
     align-items: flex-start;
-    gap: 6rem;
-    /* padding: 10rem; */
+    gap: 8rem;
+    padding-bottom: 10rem;
   }
   .main-nav-link,
-  .main-nav-link .icon {
-    font-size: 3rem;
+  .main-nav-link.btn-primary {
+    font-size: 2.6rem;
   }
-  .open-nav .icon[name="close-outline"] {
+
+  .main-nav-link .icon {
+    width: 2.6rem;
+    height: 2.6rem;
+  }
+  .open-nav .menu-close {
     display: block;
   }
-  .open-nav .icon[name="menu-outline"] {
+  .open-nav .menu-open {
     display: none;
   }
   .open-nav .main-nav {
@@ -195,7 +200,7 @@
     align-items: stretch;
     width: 80%;
   }
-  .events-item {
+  .event-item {
     width: 100%;
   }
   .events-img-box {
@@ -371,7 +376,7 @@
   .events-list {
     width: 100%;
   }
-  .events-item {
+  .event-item {
     padding: 2rem;
   }
   .pricing-tags {
