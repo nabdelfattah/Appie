@@ -22,9 +22,7 @@ function isInHeroSection() {
   return isInViewport;
 }
 openNavBtn.addEventListener("click", function () {
-  console.log({openNavBtn})
   headerEl.classList.add("open-nav");
-  console.log({closeNavBtn})
   document.body.classList.add("sticky");
 });
 closeNavBtn.addEventListener("click", function () {
