@@ -51,6 +51,27 @@ allLinks.forEach(function (link) {
   });
 });
 
+// Apply Active Style to Navigation Links Based on Section Visibility
+function sectionObserver() {
+  const observer = new IntersectionObserver(cb, { threshold: 0.5 });
+  function cb(entries) {
+    entries.forEach((entry) => {
+      if (entry.isIntersecting) {
+        // Remove the active class from the previously active navigation link
+        document.querySelector(`#${entry.target.id}-navLink`).classList.add('main-nav-link--active')
+      }
+      else {
+        document.querySelector(`#${entry.target.id}-navLink`).classList.remove('main-nav-link--active')
+      }
+    });
+  } 
+  const elements = document.querySelectorAll('.section')
+  // if multiple elements are passed; observe each one individually
+  if (elements.length) elements.forEach((el) => observer.observe(el));
+  // If a single element is passed, observe it directly
+  else observer.observe(elements);
+}
+sectionObserver();
 
 // SET CURRENT YRAR
 const yearEl = document.querySelector(".year");
@@ -118,4 +139,5 @@ initObserver(document.querySelectorAll('.testimonial'), 'show', 0.5);
 delayedObserver(document.querySelectorAll('.sponser-img-t'), 'show', 0.5);
 delayedObserver(document.querySelectorAll('.sponser-img-b'), 'show', 0.5);
 delayedObserver(document.querySelectorAll('.footer-nav div'), 'show', 0.5);
-initObserver(document.querySelectorAll('.footer-app'), 'show', 0.2);
+initObserver(document.querySelectorAll('.footer-downloads'), 'show', 0.2);
+initObserver(document.querySelectorAll('.feature-description'), 'show', 0.2);

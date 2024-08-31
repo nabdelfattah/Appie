@@ -37,7 +37,7 @@
       <nav class="main-nav">
         <ul class="main-nav-list">
           <li>
-            <a class="main-nav-link" href="#">
+            <a class="main-nav-link" href="#about" id="about-navLink">
               Home
               <svg
                 class="icon"
@@ -59,10 +59,12 @@
             </a>
           </li>
           <li>
-            <a class="main-nav-link" href="#service">Service</a>
+            <a class="main-nav-link" href="#service" id="service-navLink"
+              >Service</a
+            >
           </li>
           <li>
-            <a class="main-nav-link" href="#pages">
+            <a class="main-nav-link" href="#pages" id="pages-navLink">
               Pages
               <svg
                 class="icon"
@@ -84,7 +86,7 @@
             </a>
           </li>
           <li>
-            <a class="main-nav-link" href="#news">
+            <a class="main-nav-link" href="#news" id="news-navLink">
               News
               <svg
                 class="icon"
@@ -106,7 +108,7 @@
             </a>
           </li>
           <li>
-            <a class="main-nav-link" href="#contact">
+            <a class="main-nav-link" href="#contact" id="contact-navLink">
               Contact
               <svg
                 class="icon"
@@ -128,7 +130,10 @@
             </a>
           </li>
           <li>
-            <a class="main-nav-link btn btn--primary" href="#learn-more"
+            <a
+              class="main-nav-link btn btn--primary"
+              href="#learn-more"
+              id="learn-more-navLink"
               >Get Started</a
             >
           </li>
@@ -149,7 +154,7 @@
     </header>
 
     <main>
-      <section class="section-hero">
+      <section class="section-hero section" id="about">
         <div class="hero">
           <div class="hero-text-box">
             <h1 class="heading-primary">
@@ -215,7 +220,7 @@
         </div>
       </section>
 
-      <section class="section-features fluid-section" id="service">
+      <section class="section-features fluid-section section" id="service">
         <div class="container">
           <header class="header-secondary">
             <div>
@@ -370,7 +375,7 @@
         </div>
       </section>
 
-      <section class="section-marketing fluid-section" id="pages">
+      <section class="section-marketing fluid-section section" id="pages">
         <div class="marketing-box container grid grid--2-cols">
           <div
             class="marketing-img-box"
@@ -418,7 +423,7 @@
         </div>
       </section>
 
-      <section class="section-events fluid-section" id="news">
+      <section class="section-events fluid-section section" id="news">
         <div class="container">
           <header class="header">
             <h2 class="heading-secondary white centered">
@@ -516,7 +521,7 @@
         </div>
       </section>
 
-      <section class="section-learn fluid-section" id="learn-more">
+      <section class="section-learn fluid-section section" id="learn-more">
         <div class="learn-how container">
           <video
             class="learn-img-box"
@@ -559,7 +564,7 @@
         </div>
       </section>
 
-      <section class="section-download fluid-section" id="download">
+      <section class="section-download fluid-section">
         <div class="container">
           <p class="subheading">Download Our App</p>
           <h2 class="heading-secondary">
@@ -860,7 +865,7 @@
       </section>
     </main>
 
-    <footer id="contact" class="footer">
+    <footer id="contact" class="footer section">
       <nav class="footer-nav">
         <div class="logo-col">
           <img class="footer-logo" src="images/logo.png" alt="appie's logo" />
