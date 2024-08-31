@@ -425,19 +425,16 @@
   font-size: 3.2rem;
   line-height: 1.2;
   font-weight: 700;
-  /* text-shadow: 0 0 1px currentColor; */
   margin-bottom: 2rem;
 }
 .learn-text {
   font-size: 1.8rem;
   line-height: 1.5;
   color: var(--color-gray);
-  /* text-shadow: 0 0 1px currentColor; */
   margin-bottom: 4.2rem;
 }
 .learn-text-box > .btn--secondary {
   color: #262947;
-  /* text-shadow: 0 0 1px currentColor; */
 }
 .btn-learn {
   background-color: var(--color-white);
@@ -495,9 +492,6 @@
 .section-pricing {
   padding-top: 10rem;
   padding-bottom: 10rem;
-}
-.section-pricing .heading-secondary {
-  /* text-shadow: 0 0 1px currentColor; */
 }
 .pricing-tags {
   display: inline-block;
@@ -563,7 +557,6 @@
 .plan-price span:nth-child(2) {
   font-size: 4.8rem;
   font-weight: 700;
-  /* text-shadow: 0 0 1px currentColor; */
 }
 .plan-price span:last-child {
   color: var(--color-gray2);
@@ -653,7 +646,6 @@
   box-shadow: 0 2.4rem 4.8rem rgba(0, 0, 0, 0.15);
 }
 .icon {
-  /* color: #ffb848; */
   height: 1.6rem;
   width: 1.6rem;
 }
@@ -666,20 +658,17 @@
 }
 .testimonial-text {
   font-size: 2.2rem;
-  /* text-shadow: 0 0 1px currentColor; */
   line-height: 1.6;
   margin-bottom: 3rem;
 }
 .testimonial-name {
   font-size: 2.2rem;
   font-weight: 700;
-  /* text-shadow: 0 0 1px currentColor; */
   margin-bottom: 1rem;
 }
 .testimonial-job {
   font-size: 1.4rem;
   color: #bfdcfc;
-  /* text-shadow: 0 0 1px currentColor; */
 }
 .btn-testimonial {
   background-color: transparent;
@@ -730,7 +719,6 @@
 .sponser-img-t:hover,
 .sponser-img-b:hover {
   box-shadow: 0 1rem 2rem rgba(0, 0, 0, 0.18);
-  /* box-shadow: 0 0.2rem 0.5rem rgba(0, 0, 0, 0.3); */
 }
 
 /******************************************/
@@ -791,7 +779,6 @@ footer {
 }
 .footer-link {
   color: var(--color-gray2);
-  /* text-shadow: 0 0 1px currentColor; */
   font-size: 1.6rem;
   text-decoration: none;
   transition: all 0.3s;
@@ -820,7 +807,6 @@ footer {
 .contact-link:link,
 .contact-link:visited {
   color: var(--color-gray);
-  /* text-shadow: 0 0 1px currentColor; */
   text-decoration: none;
   font-size: 1.6rem;
   font-style: normal;
@@ -830,7 +816,6 @@ footer {
 .footer-link:hover,
 .contact-link:hover {
   color: var(--color-blue);
-  /* text-shadow: none; */
 }
 /* STORE LINKS */
 .footer-app {

@@ -74,14 +74,12 @@ button {
 .heading-tertiary {
   font-size: 2rem;
   font-weight: 700;
-  /* text-shadow: 0 0 1px currentColor; */
   margin-bottom: 1.4rem;
 }
 .subheading {
   font-size: 1.4rem;
   letter-spacing: 1px;
   color: var(--color-primary);
-  /* text-shadow: 0 0 1px currentColor; */
   margin-bottom: 1.8rem;
 }
 .header-secondary {
@@ -92,13 +90,11 @@ button {
   letter-spacing: 0.5px;
   line-height: 1.6;
   color: var(--color-gray);
-  /* text-shadow: 0 0 1px currentColor; */
 }
 .feature-description {
   font-size: 1.7rem;
   line-height: 1.6;
   color: var(--color-gray);
-  /* text-shadow: 0 0 1px currentColor; */
   margin-bottom: 3.2rem;
 }
 
@@ -110,7 +106,6 @@ button {
   cursor: pointer;
   text-decoration: none;
   font-size: 1.6rem;
-  /* box-shadow: 0 0 1px currentColor; */
   padding: 1.8rem 3.2rem;
   border-radius: 100px;
   transition: all 0.3s;
@@ -160,9 +155,6 @@ button {
 .icon-arrows {
   font-size: 2.2rem;
 }
-/* .right-arrow {
-  transition: all 0.3s;
-} */
 .feature-link:hover .right-arrow,
 .features-btn:hover .right-arrow {
   animation: jump 1s infinite alternate ease-in-out;
