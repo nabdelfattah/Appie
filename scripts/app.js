@@ -1,6 +1,7 @@
 import { clickPricingBtnHandler } from "./handlers.js";
+import { delayedObserver, initObserver } from "./observer.js"
 
-const headerEl = document.querySelector(".header");
+const headerEl = document.querySelector(".main-header");
 const openNavBtn = document.querySelector(".menu-open");
 const closeNavBtn = document.querySelector(".menu-close");
 const sectionHeroEl = document.querySelector(".section-hero");
@@ -94,4 +95,27 @@ counterObserver.observe(document.querySelector('.hero-counter'))
 // apply on section statistics
 document.querySelectorAll('.data-point strong').forEach(el => counterObserver.observe(el))
 
-
+// OBSERVER
+initObserver(document.querySelectorAll('.main-nav-link'), 'show', 0.5);
+initObserver(document.querySelectorAll('.hero-text-box'), 'show', 0.5);
+initObserver(document.querySelectorAll('.hero-img-box'), 'show', 0.5);
+initObserver(document.querySelectorAll('.header-secondary'), 'show', 0.5);
+initObserver(document.querySelectorAll('.feature'), 'show', 0.5);
+initObserver(document.querySelectorAll('.feature:nth-child(even)'), 'show', 0.5);
+initObserver(document.querySelectorAll('.marketing-box'), 'show', 0.5);
+initObserver(document.querySelectorAll('.marketing-item .icon'), 'enlarge', 0.5);
+initObserver(document.querySelectorAll('.header'), 'show', 0.5);
+delayedObserver(document.querySelectorAll('.event-item'), 'show', 0.5);
+initObserver(document.querySelectorAll('.events-img-box'), 'show', 0.5);
+delayedObserver(document.querySelectorAll('.statistic div'), 'show', 0.5);
+initObserver(document.querySelectorAll('.learn-img-box'), 'show', 0.5);
+initObserver(document.querySelectorAll('.learn-text-box'), 'show', 0.5);
+initObserver(document.querySelectorAll('.section-download .container'), 'show', 0.5);
+initObserver(document.querySelectorAll('.fresh'), 'show', 0.3);
+initObserver(document.querySelectorAll('.sweet'), 'show', 0.3);
+initObserver(document.querySelectorAll('.juicy'), 'show', 0.3);
+initObserver(document.querySelectorAll('.testimonial'), 'show', 0.5);
+delayedObserver(document.querySelectorAll('.sponser-img-t'), 'show', 0.5);
+delayedObserver(document.querySelectorAll('.sponser-img-b'), 'show', 0.5);
+delayedObserver(document.querySelectorAll('.footer-nav div'), 'show', 0.5);
+initObserver(document.querySelectorAll('.footer-app'), 'show', 0.2);

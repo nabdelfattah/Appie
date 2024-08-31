@@ -1,7 +1,7 @@
 /******************************************/
 /* HEADER */
 /*****************************************/
-.header {
+.main-header {
   height: 8rem;
   padding: 5rem 11.6rem 5rem 9rem;
   background-color: #eef1f6;
@@ -65,7 +65,7 @@
 }
 
 /* sticky navigation */
-.sticky .header {
+.sticky .main-header {
   position: fixed;
   top: 0;
   width: 100%;
@@ -869,4 +869,51 @@ footer {
 }
 .ios {
   background-color: #fff;
+}
+/* observers */
+/* vertical movement */
+.main-nav-link {
+  opacity: 0;
+  transform: translate(0, -2rem);
+  transition: all 0.3s;
+}
+.marketing-box,
+.header-secondary,
+.header,
+.section-download .container,
+.fresh,
+.sweet,
+.juicy,
+.testimonial,
+.footer-app {
+  opacity: 0;
+  transform: translate(0, 20rem);
+  transition: all 0.6s;
+}
+/* horizontal movement */
+.hero-text-box,
+.feature:nth-child(odd),
+.event-item,
+.learn-text-box,
+.sponser-img-b {
+  opacity: 0;
+  transform: translate(-10rem, 0);
+  transition: all 0.6s;
+}
+.hero-img-box,
+.feature:nth-child(even),
+.events-img-box,
+.statistic div,
+.learn-img-box,
+.sponser-img-t,
+.footer-nav > div {
+  opacity: 0;
+  transform: translate(10rem, 0);
+  transition: all 0.6s;
+}
+/* enlarge */
+.marketing-item .icon {
+  opacity: 0;
+  transform: scale(0);
+  transition: all 1s;
 }
