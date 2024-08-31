@@ -1,3 +1,12 @@
+:root {
+  --color-primary: #ff3e66;
+  --color-black: #0e1133;
+  --color-white: #ffffff;
+  --color-blue: #2a6df5;
+  --color-gray: #7f7f85;
+  --color-gray2: #727278;
+  --bg-offWhite: #eef1f6;
+}
 * {
   padding: 0;
   margin: 0;
@@ -13,7 +22,7 @@ body {
   font-family: "Roboto", sans-serif;
   line-height: 1;
   font-weight: 400;
-  color: #0e1133;
+  color: var(--color-black);
   overflow-x: hidden;
 }
 button {
@@ -71,7 +80,7 @@ button {
 .subheading {
   font-size: 1.4rem;
   letter-spacing: 1px;
-  color: #ff3e66;
+  color: var(--color-primary);
   /* text-shadow: 0 0 1px currentColor; */
   margin-bottom: 1.8rem;
 }
@@ -82,13 +91,13 @@ button {
   font-size: 2rem;
   letter-spacing: 0.5px;
   line-height: 1.6;
-  color: #727278;
+  color: var(--color-gray);
   /* text-shadow: 0 0 1px currentColor; */
 }
 .feature-description {
   font-size: 1.7rem;
   line-height: 1.6;
-  color: #7f7f85;
+  color: var(--color-gray);
   /* text-shadow: 0 0 1px currentColor; */
   margin-bottom: 3.2rem;
 }
@@ -108,18 +117,18 @@ button {
 }
 .btn--primary:link,
 .btn--primary:visited {
-  color: #fff;
-  background-color: #ff3e66;
+  color: var(--color-white);
+  background-color: var(--color-primary);
 }
 .btn--primary:hover,
 .btn--primary:active {
-  background-color: rgb(255, 81, 117);
+  background-color: #ff5175;
   box-shadow: 0 0.5rem 1rem rgba(255, 81, 117, 0.4);
 }
 .btn--secondary:link,
 .btn--secondary:visited {
   border: 1px solid #d6d9dd;
-  background-color: #fff;
+  background-color: var(--color-white);
 }
 .btn--secondary:hover,
 .btn--secondary:active {
@@ -163,7 +172,7 @@ button {
   text-align: center;
 }
 .white {
-  color: #fff !important;
+  color: var(--color-white) !important;
 }
 
 @keyframes jump {
