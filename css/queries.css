@@ -14,8 +14,12 @@
   .events {
     column-gap: 2rem;
   }
-  .testimonial {
+  .testimonials {
     padding: 11rem 16rem;
+  }
+  .section-testimonial .arrows-box {
+    bottom: 11rem;
+    right: 16rem;
   }
   .footer-nav {
     column-gap: 7rem;
@@ -69,9 +73,15 @@
   .juicy {
     padding: 3rem;
   }
-  .testimonial {
+  .testimonials {
     padding: 11rem 9rem;
+  }
+  .testimonial {
     gap: 2rem;
+  }
+  .section-testimonial .arrows-box {
+    bottom: 11rem;
+    right: 9rem;
   }
   footer {
     padding: 11rem 6rem;
@@ -312,8 +322,12 @@
   .app-stores-box {
     flex-wrap: wrap;
   }
-  .testimonial {
+  .testimonials {
     padding: 8rem 4rem;
+  }
+  .section-testimonial .arrows-box {
+    bottom: 8rem;
+    right: 4rem;
   }
   .testimonial-text {
     font-size: 1.8rem;
@@ -398,8 +412,11 @@
     padding-right: 2rem;
     padding-left: 2rem;
   }
-  .testimonial {
+  .testimonials {
     padding: 8rem 2rem;
+  }
+  .section-testimonial .arrows-box {
+    right: 2rem;
   }
   .btn-arrows {
     padding: 1rem;

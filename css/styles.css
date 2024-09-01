@@ -623,10 +623,12 @@
 /******************************************/
 /* TESTIMONIAL */
 /*****************************************/
-.testimonial {
+.testimonials {
+  padding: 11rem 17rem;
   background-image: linear-gradient(to bottom right, #195293, #6aacf8);
   color: #d4e7fd;
-  padding: 11rem 17rem;
+}
+.testimonial {
   display: grid;
   grid-template-columns: 2fr 8fr;
   align-items: center;
@@ -651,10 +653,6 @@
 .reviews {
   font-size: 1.4rem;
 }
-.name-arrows {
-  display: flex;
-  justify-content: space-between;
-}
 .testimonial-text {
   font-size: 2.2rem;
   line-height: 1.6;
@@ -669,18 +667,26 @@
   font-size: 1.4rem;
   color: #bfdcfc;
 }
-.btn-testimonial {
+.section-testimonial .arrows-box {
+  position: absolute;
+  bottom: 11rem;
+  right: 17rem;
+}
+.btn-test-prev,
+.btn-test-next {
   background-color: transparent;
   transition: all 0.3s;
 }
-.btn-testimonial:hover {
+.btn-test-prev:hover,
+.btn-test-next:hover {
   background-color: var(--color-white);
 }
 .icon-testimonial {
   color: var(--color-white);
   transition: all 0.3s;
 }
-.btn-testimonial:hover .icon-testimonial {
+.btn-test-prev:hover .icon-testimonial,
+.btn-test-next:hover .icon-testimonial {
   color: var(--color-blue);
 }
 /******************************************/
@@ -869,7 +875,7 @@ footer {
 .fresh,
 .sweet,
 .juicy,
-.testimonial {
+.testimonials {
   opacity: 0;
   transform: translate(0, 20rem);
   transition: all 0.6s;

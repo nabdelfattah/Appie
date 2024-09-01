@@ -1,7 +1,17 @@
+import { createTestimonial } from "./elementsVendor.js";
 import { clickPricingBtnHandler } from "./handlers.js";
 import { delayedObserver, initObserver } from "./observer.js"
 import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
 
+const testimonials = [
+  {img: "../images/people/test-1.jpg", starts: "5", reviews: 4.7, name: "Hanson Deck", jobTitle: "Web developer", testimonial: "Why I say old chap that is spiffing chip shop such a fibber the bee's knees, the wireless Richard fantastic do one cracking goal pukka backing cake starkers much don't get shirty with me argy bargy, I snaff chimney pot blimey he lost his bottle cup."}, 
+  {img: "../images/people/test-2.jpg", starts: "4", reviews: 3.9, name: "Ethan Carter", jobTitle: "UI/UX designer", testimonial: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem esse, libero magni cupiditate omnis aperiam, illo ullam repellendus quas dicta veniam quasi laborum, amet optio totam? Iusto tempore fugit consectetur!"}, 
+  {img: "../images/people/test-3.jpg", starts: "5", reviews: 5, name: "Liam Reynolds", jobTitle: "Mobile developer", testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Cupiditate aspernatur aliquam tempora sapiente voluptas minus corporis tenetur officiis amet, adipisci eos illum enim voluptates. Hic alias neque modi iusto obcaecati! Placeat quo laboriosam."}, 
+  {img: "../images/people/test-4.jpg", starts: "5", reviews: 4.5, name: "Noah Harrison", jobTitle: "Data analyst", testimonial: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Consequatur ipsum iusto non, beatae harum autem officia impedit saepe quas accusantium nemo, rerum quaerat at error sit modi vero vitae fugiat molestias tenetur dicta optio. Autem, explicabo! "}, 
+  {img: "../images/people/test-5.jpg", starts: "4", reviews: 3.5, name: "Aiden Brooks", jobTitle: "Game developer", testimonial: "Lorem ipsum, dolor sit amet consectetur adipisicing elit. Rem esse, libero magni cupiditate omnis aperiam, illo ullam repellendus quas dicta veniam quasi laborum, amet optio totam? Iusto tempore fugit consectetur!"}, 
+]
+
+// Implementing carousel of section-learn 
 const videoSwiper = new Swiper('.learn-video-carousel', {
   allowTouchMove: false,
   loop: true,
@@ -11,7 +21,6 @@ const videoSwiper = new Swiper('.learn-video-carousel', {
     prevEl: '.btn-learn-prev',
   },
 });
-
 const imgSwiper = new Swiper('.learn-img-carousel', {
   allowTouchMove: false,
   loop: true,
@@ -21,6 +30,19 @@ const imgSwiper = new Swiper('.learn-img-carousel', {
     prevEl: '.btn-learn-prev',
   },
 });
+// Implementing carousel of section-testimonial
+const testimoinalSwiper = new Swiper('.test-carousel', {
+  grabCursor: true,
+  loop: true,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.btn-test-next',
+    prevEl: '.btn-test-prev',
+  },
+});
+
+// createTestimonial
+document.querySelectorAll('.test-slide').forEach((el, index) => createTestimonial(el, testimonials[index]))
 
 
 const headerEl = document.querySelector(".main-header");
@@ -158,7 +180,7 @@ initObserver(document.querySelectorAll('.section-download .container'), 'show', 
 initObserver(document.querySelectorAll('.fresh'), 'show', 0.3);
 initObserver(document.querySelectorAll('.sweet'), 'show', 0.3);
 initObserver(document.querySelectorAll('.juicy'), 'show', 0.3);
-initObserver(document.querySelectorAll('.testimonial'), 'show', 0.5);
+initObserver(document.querySelectorAll('.testimonials'), 'show', 0.5);
 delayedObserver(document.querySelectorAll('.sponser-img-t'), 'show', 0.5);
 delayedObserver(document.querySelectorAll('.sponser-img-b'), 'show', 0.5);
 delayedObserver(document.querySelectorAll('.footer-nav div'), 'show', 0.5);
