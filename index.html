@@ -523,21 +523,50 @@
 
       <section class="section-learn fluid-section section" id="learn-more">
         <div class="learn-how container">
-          <video
-            class="learn-img-box"
-            controls
-            poster="images/video-thumb-1.jpg"
-          >
-            <source src="video.mp4" type="video/mp4" />
-          </video>
-          <picture class="learn-img-box">
-            <source srcset="images/video-slide-1.webp" type="image/webp" />
-            <source srcset="images/video-slide-1.jpg" type="image/jpg" />
-            <img
-              src="images/video-slide-1.jpg"
-              alt="a phone opend on an avatar creating app"
-            />
-          </picture>
+          <div class="swiper learn-video-carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <video class="video" controls poster="images/video-thumb-1.jpg">
+                  <source src="video.mp4" type="video/mp4" />
+                </video>
+              </div>
+              <div class="swiper-slide">
+                <video class="video" controls>
+                  <source src="video2.mp4" type="video/mp4" />
+                </video>
+              </div>
+            </div>
+          </div>
+          <div class="swiper learn-img-carousel">
+            <div class="swiper-wrapper">
+              <div class="swiper-slide">
+                <picture class="picture">
+                  <source
+                    srcset="images/video-slide-1.webp"
+                    type="image/webp"
+                  />
+                  <source srcset="images/video-slide-1.jpg" type="image/jpg" />
+                  <img
+                    src="images/video-slide-1.jpg"
+                    alt="a phone opend on an avatar creating app"
+                  />
+                </picture>
+              </div>
+              <div class="swiper-slide">
+                <picture class="picture">
+                  <source
+                    srcset="images/video-slide-2.webp"
+                    type="image/webp"
+                  />
+                  <source srcset="images/video-slide-2.jpg" type="image/jpg" />
+                  <img
+                    src="images/video-slide-2.jpg"
+                    alt="a phone opend on an avatar creating app"
+                  />
+                </picture>
+              </div>
+            </div>
+          </div>
           <div class="learn-text-box">
             <p class="learn-title">Watch the two-minute video to learn how.</p>
             <p class="learn-text">
@@ -548,13 +577,21 @@
             <a href="#" class="btn btn--secondary">Get started</a>
           </div>
           <div class="arrows-box">
-            <button class="btn-learn btn-arrows">
+            <button
+              class="btn-learn-prev btn-arrows"
+              aria-label="show pervious"
+              title="previous"
+            >
               <img
                 class="icon-learn icon-arrows"
                 src="images/icons/arrow-left-solid.svg"
               />
             </button>
-            <button class="btn-learn btn-arrows">
+            <button
+              class="btn-learn-next btn-arrows"
+              aria-label="show next"
+              title="next"
+            >
               <img
                 class="icon-learn icon-arrows"
                 src="images/icons/arrow-right-gray.svg"

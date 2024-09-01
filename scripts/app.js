@@ -1,5 +1,27 @@
 import { clickPricingBtnHandler } from "./handlers.js";
 import { delayedObserver, initObserver } from "./observer.js"
+import Swiper from 'https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.mjs'
+
+const videoSwiper = new Swiper('.learn-video-carousel', {
+  allowTouchMove: false,
+  loop: true,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.btn-learn-next',
+    prevEl: '.btn-learn-prev',
+  },
+});
+
+const imgSwiper = new Swiper('.learn-img-carousel', {
+  allowTouchMove: false,
+  loop: true,
+  slidesPerView: 1,
+  navigation: {
+    nextEl: '.btn-learn-next',
+    prevEl: '.btn-learn-prev',
+  },
+});
+
 
 const headerEl = document.querySelector(".main-header");
 const openNavBtn = document.querySelector(".menu-open");
@@ -129,7 +151,8 @@ initObserver(document.querySelectorAll('.header'), 'show', 0.5);
 delayedObserver(document.querySelectorAll('.event-item'), 'show', 0.5);
 initObserver(document.querySelectorAll('.events-img-box'), 'show', 0.5);
 delayedObserver(document.querySelectorAll('.statistic div'), 'show', 0.5);
-initObserver(document.querySelectorAll('.learn-img-box'), 'show', 0.5);
+initObserver(document.querySelectorAll('.learn-video-carousel'), 'show', 0.5);
+initObserver(document.querySelectorAll('.learn-img-carousel'), 'show', 0.5);
 initObserver(document.querySelectorAll('.learn-text-box'), 'show', 0.5);
 initObserver(document.querySelectorAll('.section-download .container'), 'show', 0.5);
 initObserver(document.querySelectorAll('.fresh'), 'show', 0.3);

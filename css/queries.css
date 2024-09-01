@@ -423,6 +423,23 @@
   }
 }
 
+/* Required Swiper styles */
+.swiper {
+  width: 100%;
+  overflow: hidden;
+}
+.swiper-wrapper {
+  display: flex;
+  height: 100%;
+}
+.swiper-slide {
+  flex-shrink: 0;
+}
+/* .imgSwiper {
+  width: 100%;
+  overflow: hidden;
+} */
+
 /* observer */
 .show {
   opacity: 1 !important;
