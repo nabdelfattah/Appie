@@ -54,7 +54,6 @@ const sectionHeroEl = document.querySelector(".section-hero");
 const optionObj = { root: null, threshold: 0, rootMargin: "-80px",}
 function callback(entries) {
   const ent = entries[0];
-  console.log(ent.boundingClientRect)
   if (!ent.isIntersecting)  document.body.classList.add("sticky"); 
   else if (!document.querySelector('.open-nav')) document.body.classList.remove("sticky");
 }
