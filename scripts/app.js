@@ -54,6 +54,7 @@ const sectionHeroEl = document.querySelector(".section-hero");
 const optionObj = { root: null, threshold: 0, rootMargin: "-80px",}
 function callback(entries) {
   const ent = entries[0];
+  console.log(ent.boundingClientRect)
   if (!ent.isIntersecting)  document.body.classList.add("sticky"); 
   else if (!document.querySelector('.open-nav')) document.body.classList.remove("sticky");
 }
@@ -176,7 +177,7 @@ delayedObserver(document.querySelectorAll('.statistic div'), 'show', 0.5);
 initObserver(document.querySelectorAll('.learn-video-carousel'), 'show', 0.5);
 initObserver(document.querySelectorAll('.learn-img-carousel'), 'show', 0.5);
 initObserver(document.querySelectorAll('.learn-text-box'), 'show', 0.5);
-initObserver(document.querySelectorAll('.section-download .container'), 'show', 0.5);
+initObserver(document.querySelectorAll('.section-download .container'), 'show', 0.3);
 initObserver(document.querySelectorAll('.fresh'), 'show', 0.3);
 initObserver(document.querySelectorAll('.sweet'), 'show', 0.3);
 initObserver(document.querySelectorAll('.juicy'), 'show', 0.3);
