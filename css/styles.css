@@ -412,8 +412,9 @@
 .section-learn {
   display: flex;
   justify-content: center;
-  padding-right: 2.4rem;
-  padding-left: 2.4rem;
+  /* padding-right: 2.4rem;
+  padding-left: 2.4rem; */
+  padding: 0 2.4rem 8rem 2.4rem;
 }
 .learn-how {
   display: grid;
