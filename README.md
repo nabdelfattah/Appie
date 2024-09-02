@@ -1,6 +1,6 @@
 # appie Landing Page
 
-This repository contains the source code for the appie app landing page, a responsive and modern website built for a dummy startup called appie. The project was developed using HTML, CSS, and JavaScript, with the Swiper library integrated to create a carousel for the CTA section and testimonial section.
+This repository contains the source code for the appie app landing page, a responsive and modern website built for a dummy startup called appie. The project was developed using HTML, CSS, and JavaScript, with the Swiper library integrated to create the carousel for CTA section and testimonial section.
 
 ## 🚀 Live Demo
 
