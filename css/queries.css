@@ -231,10 +231,19 @@
   }
   .learn-how {
     grid-template-columns: 1fr;
+    grid-template-rows: auto auto auto auto;
     justify-items: start;
+    grid-auto-flow: row;
   }
   .learn-how .arrows-box {
-    visibility: hidden;
+    order: -1;
+    margin-top: -5rem;
+    gap: 5rem;
+    /* grid-row: 2 / 3;
+    grid-column: 1; */
+  }
+  .learn-video-carousel {
+    order: -2;
   }
   .learn-text-box {
     grid-row: 2;
