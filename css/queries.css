@@ -234,19 +234,20 @@
     grid-template-rows: auto auto auto auto;
     justify-items: start;
     grid-auto-flow: row;
+    row-gap: 0;
   }
   .learn-how .arrows-box {
-    order: -1;
-    margin-top: -5rem;
-    gap: 5rem;
-    /* grid-row: 2 / 3;
-    grid-column: 1; */
+    margin-top: -7.6rem;
+    gap: 2rem;
+    margin-left: auto;
   }
   .learn-video-carousel {
-    order: -2;
+    margin-bottom: 2.4rem;
+  }
+  .learn-img-carousel {
+    grid-row: 4;
   }
   .learn-text-box {
-    grid-row: 2;
     padding: 0;
   }
   .learn-text {
