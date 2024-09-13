@@ -240,6 +240,7 @@
     margin-top: -7.6rem;
     gap: 2rem;
     margin-left: auto;
+    z-index: 1;
   }
   .learn-video-carousel {
     margin-bottom: 2.4rem;
